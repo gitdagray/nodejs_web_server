@@ -1,0 +1,19 @@
+{
+  "name": "05tut",
+  "version": "1.0.0",
+  "description": "Node.js Web Server tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Dave Gray",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.23.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
