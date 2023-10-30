@@ -1,0 +1,18 @@
+20231026	14:54:31	1e90d985-4378-40a6-86ea-5045c4d762a8	Error: Not allowed by CORS
+20231026	16:10:29	a955071c-55df-49df-bc62-11351b3238b7	Error: ENOENT: no such file or directory, stat 'D:\my code\Node\Node-server\nodejs_web_server\routes\views\404.html'
+20231027	12:24:11	3cb431d4-9678-4cea-a0a7-ffb7d1df74d6	TypeError: Assignment to constant variable.
+20231027	12:25:34	1917c25b-1678-4497-8ba1-a65e71d2695f	TypeError: Assignment to constant variable.
+20231027	12:25:56	6e237412-273b-47c5-b332-b1dd07514690	TypeError: Cannot set properties of undefined (setting 'employees')
+20231027	12:32:07	7870f4c8-ea0a-4299-ac1b-8585c4137531	TypeError: Assignment to constant variable.
+20231027	12:32:49	488f4b4e-2713-4549-9c29-42be15b43ceb	TypeError: Assignment to constant variable.
+20231027	12:32:51	0ce00f76-2ec5-4300-8f15-6c9670ce9154	TypeError: Assignment to constant variable.
+20231027	12:32:53	723aa239-ebdf-4ce5-bcd9-600f72df1d81	TypeError: Assignment to constant variable.
+20231027	12:32:54	9f2b85e7-1808-4663-96a9-894e5fdd4c3d	TypeError: Assignment to constant variable.
+20231027	13:22:15	a4cc721b-7d7a-47c4-b97b-2bbfa34c79ea	SyntaxError: Unexpected string in JSON at position 18
+20231027	14:59:45	fa17cf0c-7cf7-4605-8014-d076520936dc	TypeError: data.employees is not a function
+20231027	15:03:30	322eee6b-7d2d-4a35-b26d-e92b43373b38	TypeError: data.employees.push is not a function
+20231027	15:06:27	6dcf1fa0-ace8-42d6-ab23-2989b6f5c47d	TypeError: data.employees.find is not a function
+20231027	15:20:52	70766637-f0a8-401f-b50e-2a9aec907387	TypeError: Assignment to constant variable.
+20231027	15:22:19	04857ca8-ca21-497a-974b-a5425a675741	TypeError: Assignment to constant variable.
+20231027	18:00:48	a09e6990-0e10-4d8b-8838-5619f6c4ec50	Error: ENOENT: no such file or directory, stat 'D:\my code\Node\Node-server\views\404.html'
+20231027	18:02:04	2ff4faf6-1acc-45f5-aa1e-72cb08fe3983	Error: ENOENT: no such file or directory, stat 'D:\my code\Node\Node-server\views\404.html'
