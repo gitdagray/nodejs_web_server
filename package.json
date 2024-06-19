@@ -1,7 +1,7 @@
 {
-  "name": "05tut",
+  "name": "06tut",
   "version": "1.0.0",
-  "description": "Node.js Web Server tutorial",
+  "description": "Node.js Express tutorial",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.23.0",
+    "express": "^4.19.2",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
