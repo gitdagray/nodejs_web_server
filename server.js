@@ -77,12 +77,21 @@ const server = http.createServer((req, res) => {
     // makes .html extension not required in the browser
     if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
 
-    const fileExists = fs.existsSync(filePath);
+    // Sanitize the file path to prevent path traversal vulnerabilities
+    const safeBasePath = path.join(__dirname, 'views');
+    const resolvedPath = path.resolve(filePath);
+    if (!resolvedPath.startsWith(safeBasePath)) {
+        res.writeHead(403, { 'Content-Type': 'text/html' });
+        res.end('<h1>403 Forbidden</h1>');
+        return;
+    }
+
+    const fileExists = fs.existsSync(resolvedPath);
 
     if (fileExists) {
-        serveFile(filePath, contentType, res);
+        serveFile(resolvedPath, contentType, res);
     } else {
-        switch (path.parse(filePath).base) {
+        switch (path.parse(resolvedPath).base) {
             case 'old-page.html':
                 res.writeHead(301, { 'Location': '/new-page.html' });
                 res.end();
