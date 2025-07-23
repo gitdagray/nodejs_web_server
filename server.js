@@ -65,17 +65,19 @@ const server = http.createServer((req, res) => {
             contentType = 'text/html';
     }
 
+    // Sanitize the URL to prevent path traversal
+    let sanitizedPath = path.normalize(req.url).replace(/^(\.\.[\/\\])+/, '');
     let filePath =
-        contentType === 'text/html' && req.url === '/'
+        contentType === 'text/html' && sanitizedPath === '/'
             ? path.join(__dirname, 'views', 'index.html')
-            : contentType === 'text/html' && req.url.slice(-1) === '/'
-                ? path.join(__dirname, 'views', req.url, 'index.html')
+            : contentType === 'text/html' && sanitizedPath.slice(-1) === '/'
+                ? path.join(__dirname, 'views', sanitizedPath, 'index.html')
                 : contentType === 'text/html'
-                    ? path.join(__dirname, 'views', req.url)
-                    : path.join(__dirname, req.url);
+                    ? path.join(__dirname, 'views', sanitizedPath)
+                    : path.join(__dirname, sanitizedPath);
 
     // makes .html extension not required in the browser
-    if (!extension && req.url.slice(-1) !== '/') filePath += '.html';
+    if (!extension && sanitizedPath.slice(-1) !== '/') filePath += '.html';
 
     const fileExists = fs.existsSync(filePath);
 
